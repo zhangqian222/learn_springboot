@@ -1,9 +1,0 @@
-spring:
-#  mvc:
-#    static-path-pattern: "/img/**"
-
-  web:
-    resources:
-      static-locations: classpath:/myImg
-      add-mappings: true
-

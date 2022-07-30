@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>hello,springboot~</h1>
+测试REST风格
+<form action="/user" method="post">
+    <input type="hidden" name="mymethod" value="put">
+    <input type="submit" value="put 提交">
+</form>
+<form action="/user" method="post">
+    <input type="hidden" name="mymethod" value="DELETE">
+    <input type="submit" value="delete 提交">
+</form>
+<form action="/user" method="get">
+    <input type="submit" value="get 提交">
+</form>
+<form action="/user" method="post">
+    <input type="submit" value="post 提交">
+</form>
+
+
+<a href="/car/23/owner/zhangqian/?aa=bb&age=25">/car/{id}/owner/{username}/aa?bb</a><br>
+
+
+测试@RequestBody获取参数<br>
+<form id="myform" method="post" action="/requestBody">
+    用户名:<input type="text" name="username"><br>
+    密 码:<input type="password" name="password"><br>
+    <input type="submit" value="提交">
+</form>
+<li>测试@RequestAttribute获取参数</li>
+<br>
+<a href="/goto">/goto</a><br>
+<li>矩阵变量@MatrixVariable,springboot默认是禁用掉了矩阵变量的</li>
+<br>
+<a href="/path/sell;color=black,green;name=qirui">/path/sell;color=black,green;name=qirui</a><br>
+<a href="/testParam">/testParam</a>
+</body>
+</html>
