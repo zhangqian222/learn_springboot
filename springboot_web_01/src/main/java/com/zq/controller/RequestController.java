@@ -1,5 +1,6 @@
 package com.zq.controller;
 
+import com.zq.bean.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -40,5 +41,12 @@ public class RequestController {
         map.put("color", colors);
         map.put("name", name);
         return map;
+    }
+
+    //获取pojo对象
+    @ResponseBody
+    @PostMapping("/saveuser")
+    public Person saveuser(Person person) {
+        return person;
     }
 }
